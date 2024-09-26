@@ -1,0 +1,71 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: [
+    'react',
+    '@typescript-eslint',
+  ],
+  rules: {
+    quotes: 'off',
+    "comma-dangle": "off",
+    "react/jsx-curly-newline": "off",
+    "implicit-arrow-linebreak": "off",
+    'no-param-reassign': 'off',
+    'max-classes-per-file': 'off',
+    'no-empty-function': 'off',
+    'no-useless-constructor': 'off',
+    'no-restricted-syntax': 'off',
+    'no-unused-expressions': 'off',
+    'no-use-before-define': 'off',
+    'lines-between-class-members': 'off',
+    'no-underscore-dangle': 'off',
+    'import/no-cycle': 'off',
+    'class-methods-use-this': 'off',
+    'import/prefer-default-export': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'no-return-assign': 'off',
+    'react/require-default-props': 'off',
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    'max-len': 0,
+    'linebreak-style': 0,
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
+};
